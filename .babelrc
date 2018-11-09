@@ -1,0 +1,12 @@
+{
+	
+	"plugins": [
+		"@babel/plugin-proposal-export-default-from",
+		"@babel/plugin-proposal-class-properties",
+		["import", { "libraryName": "antd", "style": true} ],
+	],
+	"presets": [
+		["@babel/preset-env", { "useBuiltIns":"usage" }],
+		"@babel/preset-react"
+	]  	
+}

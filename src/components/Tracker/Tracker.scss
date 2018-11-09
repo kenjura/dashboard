@@ -1,0 +1,74 @@
+#tracker {
+	display: grid;
+	grid-template-columns: auto 10px 420px;
+	grid-template-rows: 60px 10px auto;
+	height: 100%;
+
+	aside, section {
+		box-sizing: border-box;
+	}
+	section {
+		grid-column-start: 1;
+		grid-column-end: 1;
+	}
+	aside {
+		grid-column-start: 3;
+		grid-column-end: 3;
+	}
+
+	[row="1"] {
+		grid-row-start: 1;
+		grid-row-end: 1;
+	}
+	[row="2"] {
+		grid-row-start: 3;
+		grid-row-end: 3;
+	}
+
+	#charts {
+		display: grid;
+		grid-template-columns: auto;
+		grid-template-rows: auto 10px auto 10px auto;
+
+		section:nth-of-type(1) {
+			grid-row-start: 1;
+			grid-row-end: 1;
+		}
+
+		section:nth-of-type(2) {
+			grid-row-start: 3;
+			grid-row-end: 3;
+		}
+
+		section:nth-of-type(3) {
+			grid-row-start: 5;
+			grid-row-end: 5;
+		}
+	}
+
+
+	#title { --color: hsla(0,50%,50%,0.25); }
+	#dates { --color: hsla(40,50%,50%,0.25); }
+	#map { --color: hsla(80,50%,50%,0.25); }
+	#signal { --color: hsla(120,50%,50%,0.25); }
+	#speed { --color: hsla(180,50%,50%,0.25); }
+	#acceleration { --color: hsla(240,50%,50%,0.25); }
+
+	#title, #dates, #map, #signal, #speed, #acceleration {
+		// background: var(--color);
+		background: #f7f7f7;
+		// color: var(--color);
+	}
+
+	#map {
+		position: relative;
+	}
+	#readout {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		border: 1px solid #444;
+		background: white;
+		padding: 10px;
+	}
+}
